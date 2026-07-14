@@ -1,0 +1,214 @@
+// ==========================================================================
+// NEXUS COMPONENT — MATERIAL CURATOR ACTUALIZADO (MÁXIMO CONTRASTE & UX)
+// ==========================================================================
+
+.section-curator {
+  position: relative;
+  width: 100%;
+  padding: 100px min(6vw, 100px);
+  background-color: var(--bg-color);
+  overflow: hidden;
+
+  .curator-layout {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .curator-header {
+    .section-number {
+      @include text-editorial-caps;
+      color: var(--accent-color);
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-family: $font-serif;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 400;
+      color: var(--text-main);
+    }
+  }
+
+  .interactive-canvas {
+    position: relative;
+    width: 100%;
+    height: clamp(500px, 75vh, 800px);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.3);
+
+    .canvas-base-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .material-hotspot {
+      position: absolute;
+      z-index: $z-index-base;
+
+      .hotspot-pulse {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: rgba(244, 244, 240, 0.4);
+        border: 2px solid #ffffff;
+        cursor: pointer;
+        position: relative;
+        transition: $transition-premium;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: -10px;
+          left: -10px;
+          right: -10px;
+          bottom: -10px;
+          border-radius: 50%;
+          border: 1px solid #ffffff;
+          opacity: 0;
+          animation: pulse-ring 3s cubic-bezier(0.215, 0.610, 0.355, 1) infinite;
+        }
+      }
+
+      // POSICIONAMIENTO ESTÁNDAR: Centrado y ligeramente desplazado a la derecha para no tapar el pulso
+      .hotspot-card {
+        position: absolute;
+        top: -40px; 
+        left: 40px; // Se despliega a un costado, dejando el punto libre
+        width: 280px;
+        padding: 20px;
+        border-radius: 12px;
+        background: rgba(18, 20, 22, 0.96);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateX(15px);
+        transition: $transition-premium;
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+
+        h4 {
+          font-family: $font-serif;
+          font-size: 1.1rem;
+          color: #F4F4F0;
+          margin-bottom: 8px;
+          font-weight: 400;
+        }
+
+        p {
+          font-family: $font-sans;
+          font-size: 0.85rem;
+          color: #DBDBD6;
+          line-height: 1.5;
+          font-weight: 400;
+        }
+      }
+
+      // INVERSIÓN UX EXCLUSIVA PARA PUNTOS INFERIORES O CRÍTICOS (Mármol y Cerámica)
+      &.invert-card {
+        .hotspot-card {
+          top: auto;
+          bottom: 40px; // Emerge hacia arriba de forma limpia
+          left: 50%;
+          transform: translateX(-50%) translateY(-15px);
+        }
+      }
+
+      &:hover {
+        .hotspot-pulse {
+          background: var(--accent-color);
+          border-color: var(--accent-color);
+          transform: scale(1.1);
+        }
+
+        // Se aplica solo a los hotspots normales (los que abren a la derecha)
+        &:not(.invert-card) .hotspot-card {
+          opacity: 1;
+          visibility: visible;
+          transform: translateX(0);
+        }
+      }
+
+      // HOVER EXCLUSIVO PARA TARJETAS INVERTIDAS (Asegura el centrado matemático)
+      &.invert-card:hover {
+        .hotspot-card {
+          opacity: 1;
+          visibility: visible;
+          transform: translateX(-50%) translateY(0);
+        }
+      }
+    }
+  }
+}
+
+[data-theme="light"] {
+  .material-hotspot .hotspot-card {
+    background: rgba(244, 243, 239, 0.96);
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    
+    h4 { color: #191B1D; }
+    p { color: #3A3E44; }
+  }
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.5); opacity: 0; }
+  50% { opacity: 0.5; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+@media (max-width: 992px) {
+  .section-curator {
+    padding: 60px 30px;
+    .interactive-canvas {
+      height: 50vh;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .section-curator {
+    padding: 40px 20px !important;
+
+    .interactive-canvas {
+      height: 480px !important; 
+      // El contenedor de la imagen debe poder respirar
+      margin-top: 10px;
+    }
+
+    .material-hotspot {
+      // Forzamos a que en pantallas muy pequeñas, TODAS las tarjetas emergentes se centren
+      // y fluyan por encima del hotspot para evitar colisiones con los bordes de la imagen
+      .hotspot-card {
+        position: fixed !important;
+        top: auto !important;
+        bottom: 20px !important; // Se anclan de manera fija al ras inferior del lienzo interactivo
+        left: 50% !important;
+        transform: translateX(-50%) translateY(0) !important;
+        width: calc(100% - 40px) !important; // Ocupa el ancho completo con márgenes elegantes
+        max-width: 280px !important;
+        z-index: 100;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      // Desactivamos desplazamientos erráticos de hover en móvil
+      &:hover {
+        .hotspot-card {
+          transform: translateX(-50%) translateY(0) !important;
+        }
+      }
+      
+      &.invert-card:hover {
+        .hotspot-card {
+          transform: translateX(-50%) translateY(0) !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,128 @@
+// ==========================================================================
+// NEXUS COMPONENT — MONOLITHIC HERO THRESHOLD
+// ==========================================================================
+
+.section-hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 80px min(6vw, 100px);
+  overflow: hidden;
+
+  .hero-monolith-layout {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+    width: 100%;
+  }
+
+  .hero-text-block {
+    max-width: 620px;
+
+    .editorial-tag {
+      @include text-editorial-caps;
+      color: var(--accent-color);
+      display: inline-block;
+      margin-bottom: 24px;
+    }
+
+    .hero-main-title {
+      font-family: $font-serif;
+      font-size: clamp(2.5rem, 4.5vw, 4.2rem);
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--text-main);
+      margin-bottom: 30px;
+
+      .serif-accent {
+        font-style: italic;
+        font-family: $font-serif;
+        color: var(--accent-color);
+      }
+    }
+
+    .hero-paragraph {
+      font-family: $font-sans;
+      font-size: clamp(1rem, 1.2vw, 1.15rem);
+      color: var(--text-muted);
+      max-width: 480px;
+    }
+  }
+
+  .hero-showcase-frame {
+    position: relative;
+    width: 100%;
+    height: clamp(400px, 65vh, 700px);
+    overflow: hidden;
+    border-radius: 16px; // Suavizado controlado anti-ansiedad
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+
+    .hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.03);
+      transition: $transition-premium;
+    }
+
+    &:hover {
+      .hero-img {
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+// Adaptación Responsiva para Pantallas Medianas y Móviles
+@media (max-width: 992px) {
+  .section-hero {
+    padding-top: 130px; // Evita colisión con la barra superior móvil
+    
+    .hero-monolith-layout {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .hero-text-block {
+      max-width: 100%;
+    }
+
+    .hero-showcase-frame {
+      height: 45vh;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .section-hero {
+    padding: 40px 20px !important;
+    
+    .hero-monolith-layout {
+      flex-direction: column !important; // Apila verticalmente el texto e imagen
+      gap: 30px;
+    }
+
+    .hero-text-block {
+      width: 100% !important;
+      padding-right: 0 !important;
+
+      h1.hero-main-title {
+        font-size: clamp(2.2rem, 8vw, 3rem) !important; // Escala tipográfica adaptativa real
+        line-height: 1.15;
+      }
+
+      .hero-paragraph {
+        font-size: 1rem !important;
+        margin-top: 15px;
+      }
+    }
+
+    .hero-showcase-frame {
+      width: 100% !important;
+      height: 380px !important; // Frame consistente en dispositivos móviles
+    }
+  }
+}

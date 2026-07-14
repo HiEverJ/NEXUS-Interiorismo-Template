@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS — Arquitectura de Interiores Monolítica</title>
+    <!-- Favicon SVG Nativo e Inmediato -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22 font-family=%22serif%22 fill=%22%23C5A880%22>N</text></svg>">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Prata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="scss/main.css">
+</head>
+<body>
+
+    <!-- Panel Lateral Estructural: Evolución del Liquid Glass -->
+    <aside class="control-monolith">
+        <div class="sidebar-brand">
+            <a href="#">NEXUS</a>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <ul class="nav-list">
+                <li class="nav-entry active"><a href="#hero"><span class="nav-num">01</span> Umbral</a></li>
+                <li class="nav-entry"><a href="#curator"><span class="nav-num">02</span> Materia</a></li>
+                <li class="nav-entry"><a href="#cinematic"><span class="nav-num">03</span> Galería</a></li>
+                <li class="nav-entry"><a href="#services"><span class="nav-num">04</span> Servicios</a></li>
+                <li class="nav-entry"><a href="#contact"><span class="nav-num">05</span> Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+            <button id="theme-toggle" class="system-switch" aria-label="Cambiar Entorno">
+                <span class="switch-core"></span>
+            </button>
+        </div>
+    </aside>
+
+    <!-- Contenedor Principal de Contenido desplazado por el panel lateral -->
+    <main class="viewport-wrapper">
+
+        <!-- Umbral Principal (Hero Section) -->
+        <section class="section-hero" id="hero">
+            <div class="hero-monolith-layout">
+                <div class="hero-text-block">
+                    <span class="editorial-tag">Estudio Arquitectónico</span>
+                    <h1 class="hero-main-title">La materia en su estado <span class="serif-accent">más puro.</span></h1>
+                    <p class="hero-paragraph">Diseñamos espacios volumétricos que eliminan el ruido visual para potenciar la textura del concreto, el mármol y la luz natural.</p>
+                </div>
+                <div class="hero-showcase-frame">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1400&auto=format&fit=crop" alt="Espacio Monolítico Residencial" class="hero-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- El Curador de Materiales (Interactive Section) -->
+        <!-- El Curador de Materiales (Interactive Section con múltiples Hotspots) -->
+        <!-- El Curador de Materiales (7 Hotspots Estratégicos) -->
+        <section class="section-curator" id="curator">
+            <div class="curator-layout">
+                <div class="curator-header">
+                    <span class="section-number">02 / INTERACCIÓN</span>
+                    <h2>Curaduría Matérica</h2>
+                </div>
+                
+                <div class="interactive-canvas">
+                    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=1200&auto=format&fit=crop" alt="Detalle de Interiores de Lujo" class="canvas-base-img">
+                    
+                    <!-- Hotspot 1: Mármol -->
+                    <div class="material-hotspot invert-card" style="top: 65%; left: 35%;">
+                        <div class="hotspot-pulse"></div>
+                        <div class="hotspot-card">
+                            <h4>Mármol Travertino</h4>
+                            <p>Corte monolítico sin pulir extraído de canteras seleccionadas.</p>
+                        </div>
+                    </div>
+
+                    <!-- Hotspot 2: Madera -->
+                    <div class="material-hotspot" style="top: 45%; left: 75%;">
+                        <div class="hotspot-pulse"></div>
+                        <div class="hotspot-card">
+                            <h4>Nogal Ahumado</h4>
+                            <p>Paneles lineales con tratamiento mate de veta continua.</p>
+                        </div>
+                    </div>
+
+                    <!-- Hotspot 3: Concreto -->
+                    <div class="material-hotspot" style="top: 25%; left: 50%;">
+                        <div class="hotspot-pulse"></div>
+                        <div class="hotspot-card">
+                            <h4>Concreto Expuesto</h4>
+                            <p>Acabado enduido estructural con microtextura difusa.</p>
+                        </div>
+                    </div>
+
+                    <!-- Hotspot 4: Acero (NUEVO - Escalera) -->
+                    <div class="material-hotspot" style="top: 55%; left: 20%;">
+                        <div class="hotspot-pulse"></div>
+                        <div class="hotspot-card">
+                            <h4>Acero Pavonado</h4>
+                            <p>Perfilería estructural de alta resistencia con tratamiento anticorrosión oscuro.</p>
+                        </div>
+                    </div>
+
+                    <!-- Hotspot 5: Vidrio (NUEVO - Ventanal) -->
+                    <div class="material-hotspot invert-card" style="top: 35%; left: 90%;">
+                        <div class="hotspot-pulse"></div>
+                        <div class="hotspot-card">
+                            <h4>Cristal Templado Acústico</h4>
+                            <p>Panel térmico de doble capa con filtrado UV y control de transmitancia.</p>
+                        </div>
+                    </div>
+
+                    <!-- Hotspot 6: Cerámica (NUEVO - Plato) -->
+                    <div class="material-hotspot invert-card" style="top: 82%; left: 32%;">
+                        <div class="hotspot-pulse"></div>
+                        <div class="hotspot-card">
+                            <h4>Cerámica Artesanal</h4>
+                            <p>Piezas utilitarias modeladas a mano con esmalte mate de ceniza.</p>
+                        </div>
+                    </div>
+                    <!-- Hotspot 7: Iluminación (NUEVO - Lámparas fondo) -->
+                    <div class="material-hotspot" style="top: 52%; left: 62%;">
+                        <div class="hotspot-pulse"></div>
+                        <div class="hotspot-card">
+                            <h4>Luminarias de Suspensión</h4>
+                            <p>Cúpulas de aluminio torneado con baño negro mate texturizado.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galería Cinematográfica con Controles de Navegación -->
+        <section class="section-cinematic" id="cinematic">
+            <div class="cinematic-container">
+                <div class="cinematic-header">
+                    <div class="header-text-group">
+                        <span class="section-number">03 / PORTAFOLIO</span>
+                        <h2>Obras Seleccionadas</h2>
+                    </div>
+                    <!-- Controles de navegación a la misma altura en el extremo derecho -->
+                    <div class="cinematic-controls">
+                        <button id="track-prev" class="ctrl-btn" aria-label="Anterior">←</button>
+                        <button id="track-next" class="ctrl-btn" aria-label="Siguiente">→</button>
+                    </div>
+                </div>
+                
+                <div class="cinematic-track" id="portfolio-track">
+                    <article class="cinematic-item">
+                        <div class="cinematic-image-ctx">
+                            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1000&auto=format&fit=crop" alt="Obra Residencial">
+                        </div>
+                        <div class="cinematic-meta">
+                            <h3>Pavimento de Travertino</h3>
+                            <p>Residencia Privada — Valle de Bravo</p>
+                        </div>
+                    </article>
+
+                    <article class="cinematic-item">
+                        <div class="cinematic-image-ctx">
+                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1000&auto=format&fit=crop" alt="Obra Urbana">
+                        </div>
+                        <div class="cinematic-meta">
+                            <h3>Estudio de Concreto</h3>
+                            <p>Penthouse Minimalista — CDMX</p>
+                        </div>
+                    </article>
+
+                    <article class="cinematic-item">
+                        <div class="cinematic-image-ctx">
+                            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=1000&auto=format&fit=crop" alt="Obra Comercial">
+                        </div>
+                        <div class="cinematic-meta">
+                            <h3>Volúmenes Puros</h3>
+                            <p>Galería de Arte — Guadalajara</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Capacidades y Servicios -->
+        <section class="section-services" id="services">
+            <div class="services-container">
+                <div class="services-header">
+                    <span class="section-number">04 / CAPACIDADES</span>
+                    <h2>Servicios de Autor</h2>
+                </div>
+                
+                <div class="services-wrapper">
+                    <div class="service-block">
+                        <span class="service-index">01</span>
+                        <div class="service-body">
+                            <h3>Arquitectura Interior</h3>
+                            <p>Planificación volumétrica completa y optimización del flujo espacial bajo proporciones arquitectónicas puras.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-block">
+                        <span class="service-index">02</span>
+                        <div class="service-body">
+                            <h3>Curaduría de Materiales</h3>
+                            <p>Selección y yuxtaposición táctil de piedras naturales, maderas monolíticas y texturas brutas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bloque de Cierre y Contacto -->
+        <section class="section-contact" id="contact">
+            <div class="contact-card-wrapper">
+                <span class="contact-tag">CONEXIÓN</span>
+                <h2 class="contact-headline">¿Deseas transformar un espacio?</h2>
+                <p class="contact-sub">Iniciemos un diálogo sobre tu próxima obra arquitectónica.</p>
+                <a href="mailto:studio@nexus.com" class="contact-link-action">studio@nexus.com</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Conectado al Eje -->
+    <footer class="main-footer">
+        <div class="footer-layout">
+            <p class="footer-copy">© 2026 NEXUS Studio. Todos los derechos reservados.</p>
+            <p class="footer-tagline">Estética Monolítica & Estructura Digital.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

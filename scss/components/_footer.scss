@@ -1,0 +1,97 @@
+// ==========================================================================
+// NEXUS COMPONENT — CONTACT & FOOTER CLOSURE
+// ==========================================================================
+
+.section-contact {
+  position: relative;
+  width: 100%;
+  padding: 100px min(6vw, 100px) 60px min(6vw, 100px);
+  background-color: var(--bg-color);
+
+  .contact-card-wrapper {
+    width: 100%;
+    padding: 80px 40px;
+    border-radius: 16px;
+    @include liquid-glass-monolith;
+    border: 1px solid var(--glass-border);
+    text-align: center;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+
+    .contact-tag {
+      @include text-editorial-caps;
+      color: var(--accent-color);
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    .contact-headline {
+      font-family: $font-serif;
+      font-size: clamp(2rem, 3.8vw, 3.4rem);
+      font-weight: 400;
+      color: var(--text-main);
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .contact-sub {
+      font-family: $font-sans;
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 40px;
+    }
+
+    .contact-link-action {
+      font-family: $font-serif;
+      font-size: clamp(1.5rem, 3vw, 2.5rem);
+      color: var(--text-main);
+      display: inline-block;
+      transition: $transition-premium;
+      border-bottom: 2px solid transparent;
+
+      &:hover {
+        color: var(--accent-color);
+        border-bottom-color: var(--accent-color);
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
+
+.main-footer {
+  width: 100%;
+  padding: 40px min(6vw, 100px);
+  background-color: var(--bg-color);
+  border-top: 1px solid var(--glass-border);
+
+  .footer-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    font-family: $font-sans;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+  }
+}
+
+@media (max-width: 992px) {
+  .section-contact {
+    padding: 60px 30px 40px 30px;
+    
+    .contact-card-wrapper {
+      padding: 60px 20px;
+    }
+  }
+
+  .main-footer {
+    padding: 30px;
+    
+    .footer-layout {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,100 @@
+// ==========================================================================
+// NEXUS COMPONENT — SERVICES (EDITORIAL CAPABILITIES)
+// ==========================================================================
+
+.section-services {
+  position: relative;
+  width: 100%;
+  padding: 100px min(6vw, 100px);
+  background-color: var(--bg-color);
+
+  .services-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .services-header {
+    .section-number {
+      @include text-editorial-caps;
+      color: var(--accent-color);
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-family: $font-serif;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 400;
+      color: var(--text-main);
+    }
+  }
+
+  .services-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 1px solid var(--glass-border);
+  }
+
+  .service-block {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    padding: 40px 0;
+    border-bottom: 1px solid var(--glass-border);
+    transition: $transition-premium;
+
+    .service-index {
+      font-family: $font-serif;
+      font-size: 1.1rem;
+      color: var(--accent-color);
+      opacity: 0.5;
+      transition: $transition-premium;
+    }
+
+    .service-body {
+      h3 {
+        font-family: $font-serif;
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: var(--text-main);
+        margin-bottom: 12px;
+        transition: $transition-premium;
+      }
+
+      p {
+        font-family: $font-sans;
+        font-size: 0.95rem;
+        color: var(--text-muted);
+        max-width: 600px;
+        line-height: 1.6;
+      }
+    }
+
+    // Interacción premium
+    &:hover {
+      padding-left: 20px;
+      
+      .service-index {
+        opacity: 1;
+        transform: translateX(-5px);
+      }
+
+      .service-body h3 {
+        color: var(--accent-color);
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .section-services {
+    padding: 60px 30px;
+
+    .service-block {
+      grid-template-columns: 40px 1fr;
+      padding: 30px 0;
+    }
+  }
+}
