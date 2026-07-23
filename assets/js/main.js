@@ -40,9 +40,6 @@ function initScrollSpyEngine() {
     }, { passive: true });
 }
 
-/**
- * Contracción inteligente del menú lateral basada en la dirección del Scroll
- */
 function initCollapsibleSidebar() {
     const sidebar = document.querySelector('.control-monolith');
     let lastScrollY = window.scrollY;
@@ -57,9 +54,6 @@ function initCollapsibleSidebar() {
     }, { passive: true });
 }
 
-/**
- * Controladores de clics para desplazamiento asistido en el Portafolio
- */
 function initCinematicSlider() {
     const track = document.getElementById('portfolio-track');
     const btnNext = document.getElementById('track-next');

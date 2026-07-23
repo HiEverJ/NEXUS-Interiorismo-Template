@@ -30,7 +30,6 @@ body {
   transition: background-color 0.5s $ease-monolith, color 0.5s $ease-monolith;
 }
 
-// Desplazamiento estructural para dar espacio al panel lateral izquierdo
 .viewport-wrapper {
   margin-left: 280px;
   width: calc(100% - 280px);
@@ -62,19 +61,14 @@ a {
   cursor: pointer;
 }
 
-// ==========================================================================
-// RESPONSIVE VIEWPORT RESET
-// ==========================================================================
-
 @media (max-width: 992px) {
   .viewport-wrapper {
     margin-left: 0 !important;
     width: 100% !important;
-    padding-top: 70px; // Evita que la barra de navegación superior fije tape el contenido
+    padding-top: 70px; 
     transition: none !important;
   }
 
-  // Desactiva cualquier transición de colapso lateral en móviles
   .control-monolith.collapsed + .viewport-wrapper {
     margin-left: 0 !important;
     width: 100% !important;

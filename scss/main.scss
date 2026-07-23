@@ -2,12 +2,10 @@
 // AURA MAESTRO — ARCHIVO CENTRALIZADOR DE COMPILACIÓN
 // ==========================================================================
 
-// Cimientos y Configuración Global
 @import 'variable';
 @import 'mixins';
 @import 'base';
 
-// Módulos de Componentes de la Interfaz
 @import 'components/header';
 @import 'components/hero';
 @import 'components/philosophy';

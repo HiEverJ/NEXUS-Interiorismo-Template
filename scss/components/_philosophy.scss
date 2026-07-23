@@ -74,11 +74,10 @@
         }
       }
 
-      // POSICIONAMIENTO ESTÁNDAR: Centrado y ligeramente desplazado a la derecha para no tapar el pulso
       .hotspot-card {
         position: absolute;
         top: -40px; 
-        left: 40px; // Se despliega a un costado, dejando el punto libre
+        left: 40px; 
         width: 280px;
         padding: 20px;
         border-radius: 12px;
@@ -110,11 +109,10 @@
         }
       }
 
-      // INVERSIÓN UX EXCLUSIVA PARA PUNTOS INFERIORES O CRÍTICOS (Mármol y Cerámica)
       &.invert-card {
         .hotspot-card {
           top: auto;
-          bottom: 40px; // Emerge hacia arriba de forma limpia
+          bottom: 40px; 
           left: 50%;
           transform: translateX(-50%) translateY(-15px);
         }
@@ -127,7 +125,6 @@
           transform: scale(1.1);
         }
 
-        // Se aplica solo a los hotspots normales (los que abren a la derecha)
         &:not(.invert-card) .hotspot-card {
           opacity: 1;
           visibility: visible;
@@ -135,7 +132,6 @@
         }
       }
 
-      // HOVER EXCLUSIVO PARA TARJETAS INVERTIDAS (Asegura el centrado matemático)
       &.invert-card:hover {
         .hotspot-card {
           opacity: 1;
@@ -178,26 +174,22 @@
 
     .interactive-canvas {
       height: 480px !important; 
-      // El contenedor de la imagen debe poder respirar
       margin-top: 10px;
     }
 
     .material-hotspot {
-      // Forzamos a que en pantallas muy pequeñas, TODAS las tarjetas emergentes se centren
-      // y fluyan por encima del hotspot para evitar colisiones con los bordes de la imagen
       .hotspot-card {
         position: fixed !important;
         top: auto !important;
-        bottom: 20px !important; // Se anclan de manera fija al ras inferior del lienzo interactivo
+        bottom: 20px !important; 
         left: 50% !important;
         transform: translateX(-50%) translateY(0) !important;
-        width: calc(100% - 40px) !important; // Ocupa el ancho completo con márgenes elegantes
+        width: calc(100% - 40px) !important; 
         max-width: 280px !important;
         z-index: 100;
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
       }
 
-      // Desactivamos desplazamientos erráticos de hover en móvil
       &:hover {
         .hotspot-card {
           transform: translateX(-50%) translateY(0) !important;

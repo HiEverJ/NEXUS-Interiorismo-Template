@@ -1,11 +1,6 @@
 // ==========================================================================
 // NEXUS COMPONENT — CINEMATIC SHOWCASE (HORIZONTAL SCROLL)
 // ==========================================================================
-
-// ==========================================================================
-// NEXUS COMPONENT — CINEMATIC SHOWCASE (CABECERA CORREGIDA)
-// ==========================================================================
-
 .section-cinematic {
   position: relative;
   width: 100%;
@@ -27,7 +22,6 @@
     padding-right: min(6vw, 100px);
     width: 100%;
 
-    // Agrupamos el bloque de texto con su jerarquía de herencia correcta
     .header-text-group {
       display: flex;
       flex-direction: column;
@@ -48,7 +42,6 @@
       }
     }
 
-    // Controles en el extremo derecho
     .cinematic-controls {
       display: flex;
       gap: 12px;
@@ -77,23 +70,22 @@
     }
   }
 
-  // Riel horizontal nativo optimizado por GPU
   .cinematic-track {
     display: flex;
     gap: 40px;
     overflow-x: auto;
     padding-bottom: 30px;
     padding-right: min(6vw, 100px);
-    scrollbar-width: none; // Oculta barra en Firefox
-    -webkit-overflow-scrolling: touch; // Desplazamiento inercial suave en iOS (iPhone/iPad)
+    scrollbar-width: none; 
+    -webkit-overflow-scrolling: touch; 
 
     &::-webkit-scrollbar {
-      display: none; // Oculta barra en Chrome/Safari
+      display: none; 
     }
   }
 
   .cinematic-item {
-    flex: 0 0 clamp(350px, 45vw, 650px); // Ancho fijo responsivo para cada obra
+    flex: 0 0 clamp(350px, 45vw, 650px); 
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -132,7 +124,6 @@
       }
     }
 
-    // Microinteracción premium de autor al pasar el cursor
     &:hover {
       .cinematic-image-ctx img {
         transform: scale(1.04);
