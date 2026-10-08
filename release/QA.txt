@@ -1,0 +1,38 @@
+NEXUS 1.1.0 — REGISTRO DE VALIDACIÓN
+Fecha: 8 de octubre de 2026
+
+EJECUTADO
+- node --check para assets/js/main.js y assets/js/theme.js: correcto.
+- node scripts/check.mjs: siete escenarios de tema (preferencia válida, inválida,
+  sistema y almacenamiento bloqueado), interacción y persistencia simulada: correctos.
+- Referencias de archivos locales, anclas, identificadores únicos y destinos ARIA: correctos.
+- Navegador integrado Chromium, servido en localhost:
+  anchos 320, 360, 768, 992, 1024 y 1440px; sin desbordamiento horizontal del documento.
+- Menú móvil: abre, navega a sección, cierra, actualiza aria-expanded;
+  Escape devuelve el foco al botón. Sección elegida recibe foco.
+- Materiales: Enter y Espacio abren; Escape cierra; apertura de otra ficha cierra la anterior.
+  En escritorio son puntos sobre imagen; en móvil, lista de fichas de ancho contenido.
+- Galería: End llega al final y deshabilita Next; Previous se habilita.
+- Tema: cambio oscuro/claro y recarga conservan la elección.
+- Sin JavaScript: fixture con cero scripts; navegación visible y ficha nativa abre con Enter.
+- Fotografías observadas sin fallos de carga; no errores ni advertencias en la consola consultada.
+- Se corrigieron durante QA una transición de tamaño al cambiar de breakpoint y el
+  box-sizing de los controles de materiales.
+- Empaquetado ZIP: integridad, exclusión de .git/PDF y ausencia de URL de fotografías
+  en el HTML entregable comprobadas por scripts/package.py.
+
+EVIDENCIA
+release/previews/desktop-dark.png
+release/previews/desktop-light.png
+release/previews/mobile-dark.png
+release/previews/mobile-menu.png
+
+LÍMITES
+No se ejecutaron Safari/iOS, Firefox, lector de pantalla ni dispositivo táctil físico.
+No se midió Lighthouse ni Core Web Vitals de un despliegue público.
+Movimiento reducido está implementado por CSS y comportamiento JS; no se cambió
+la preferencia del sistema operativo para esta prueba.
+No se probó un envío de correo: el contacto es mailto y usa un dominio de ejemplo.
+Estas comprobaciones no constituyen certificación WCAG ni garantía de ventas.
+
+El ZIP también se abrió extraído en navegador: cinco marcadores SVG cargaron y no hubo desbordamiento horizontal. La copia temporal de prueba se eliminó.

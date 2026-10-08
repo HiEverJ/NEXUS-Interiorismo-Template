@@ -4,126 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEXUS — Monolithic Interior Architecture</title>
-    <!-- Native Immediate SVG Favicon -->
+    <meta name="description" content="NEXUS is an interior architecture studio shaping calm, tactile spaces through natural materials, thoughtful proportions and light.">
+    <meta property="og:title" content="NEXUS — Interior Architecture">
+    <meta property="og:description" content="Explore our approach to materials, selected spaces and interior architecture services.">
+    <meta property="og:type" content="website">
+    <script src="assets/js/theme.js"></script>
+    <!-- Native SVG favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22 font-family=%22serif%22 fill=%22%23C5A880%22>N</text></svg>">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Prata&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="scss/main.css">
+    <link rel="stylesheet" href="scss/enhancements.css">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
     <!-- Monolithic Sidebar Panel: Liquid Glass v2 -->
     <aside class="control-monolith">
         <div class="sidebar-brand">
-            <a href="#">NEXUS</a>
+            <a href="#hero" aria-label="NEXUS home">NEXUS</a>
         </div>
         
-        <nav class="sidebar-nav">
+        <button id="menu-toggle" class="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false" hidden>Menu</button>
+        <nav class="sidebar-nav" id="primary-navigation" aria-label="Main navigation">
             <ul class="nav-list">
-                <li class="nav-entry active"><a href="#hero"><span class="nav-num">01</span> Threshold</a></li>
-                <li class="nav-entry"><a href="#curator"><span class="nav-num">02</span> Matter</a></li>
-                <li class="nav-entry"><a href="#cinematic"><span class="nav-num">03</span> Gallery</a></li>
+                <li class="nav-entry active"><a href="#hero"><span class="nav-num">01</span> Home</a></li>
+                <li class="nav-entry"><a href="#curator"><span class="nav-num">02</span> Materials</a></li>
+                <li class="nav-entry"><a href="#cinematic"><span class="nav-num">03</span> Projects</a></li>
                 <li class="nav-entry"><a href="#services"><span class="nav-num">04</span> Services</a></li>
                 <li class="nav-entry"><a href="#contact"><span class="nav-num">05</span> Contact</a></li>
             </ul>
         </nav>
 
         <div class="sidebar-footer">
-            <button id="theme-toggle" class="system-switch" aria-label="Toggle Environment">
+            <button id="theme-toggle" class="system-switch" type="button" aria-label="Light theme" aria-pressed="false" hidden>
                 <span class="switch-core"></span>
             </button>
         </div>
     </aside>
 
     <!-- Main Content Wrapper -->
-    <main class="viewport-wrapper">
+    <main class="viewport-wrapper" id="main-content" tabindex="-1">
 
         <!-- Principal Threshold (Hero Section) -->
-        <section class="section-hero" id="hero">
+        <section class="section-hero" id="hero" tabindex="-1">
             <div class="hero-monolith-layout">
                 <div class="hero-text-block">
                     <span class="editorial-tag">Architectural Practice</span>
                     <h1 class="hero-main-title">Matter in its most <span class="serif-accent">raw state.</span></h1>
-                    <p class="hero-paragraph">We curate volumetric spaces that strip away visual noise, amplifying the tactile essence of raw concrete, monolithic stone, and natural light.</p>
+                    <p class="hero-paragraph">We design considered interiors around natural materials, generous light, and the way you live.</p>
+                    <a class="hero-cta" href="#contact">Discuss your project <span aria-hidden="true">↗</span></a>
                 </div>
                 <div class="hero-showcase-frame">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1400&auto=format&fit=crop" alt="Monolithic Residential Space" class="hero-img">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" srcset="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&amp;fit=crop&amp;w=480&amp;q=80 480w, https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&amp;fit=crop&amp;w=800&amp;q=80 800w, https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&amp;fit=crop&amp;w=1200&amp;q=80 1200w, https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&amp;fit=crop&amp;w=1600&amp;q=80 1600w" sizes="(max-width: 992px) 100vw, 45vw" fetchpriority="high" decoding="async" alt="Monolithic Residential Space" class="hero-img">
                 </div>
             </div>
         </section>
 
         <!-- The Material Curator (Interactive Space with Hotspots) -->
-        <section class="section-curator" id="curator">
+        <section class="section-curator" id="curator" tabindex="-1">
             <div class="curator-layout">
                 <div class="curator-header">
                     <span class="section-number">02 / INTERACTION</span>
                     <h2>Material Curation</h2>
+                    <p class="material-instruction">Explore a palette of natural finishes. Select a numbered material to read more.</p>
                 </div>
                 
                 <div class="interactive-canvas">
-                    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=1200&auto=format&fit=crop" alt="Luxury Architectural Interior Detail" class="canvas-base-img">
+                    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&amp;fit=crop&amp;w=800&amp;q=80" srcset="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&amp;fit=crop&amp;w=480&amp;q=80 480w, https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&amp;fit=crop&amp;w=800&amp;q=80 800w, https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&amp;fit=crop&amp;w=1200&amp;q=80 1200w, https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&amp;fit=crop&amp;w=1600&amp;q=80 1600w" sizes="(max-width: 992px) 100vw, 75vw" loading="lazy" decoding="async" alt="Luxury Architectural Interior Detail" class="canvas-base-img">
                     
-                    <!-- Hotspot 1: Travertine (Inverted) -->
-                    <div class="material-hotspot invert-card" style="top: 65%; left: 35%;">
-                        <div class="hotspot-pulse"></div>
-                        <div class="hotspot-card">
-                            <h4>Travertine Marble</h4>
-                            <p>Unpolished monolithic slab sourced from architectural heritage quarries.</p>
-                        </div>
-                    </div>
+                    <!-- Hotspot 1: Travertine -->
+                    <details class="material-hotspot align-above" style="top: 65%; left: 35%;">
+                        <summary class="hotspot-pulse"><span aria-hidden="true">01</span><span class="material-name">Travertine Marble</span></summary>
+                        <div class="hotspot-card"><h3>Travertine Marble</h3><p>Unpolished monolithic slab sourced from architectural heritage quarries.</p></div>
+                    </details>
 
                     <!-- Hotspot 2: Smoked Walnut -->
-                    <div class="material-hotspot" style="top: 45%; left: 75%;">
-                        <div class="hotspot-pulse"></div>
-                        <div class="hotspot-card">
-                            <h4>Smoked Walnut</h4>
-                            <p>Linear paneling with matte treatment and continuous grain matching.</p>
-                        </div>
-                    </div>
+                    <details class="material-hotspot align-right" style="top: 45%; left: 75%;">
+                        <summary class="hotspot-pulse"><span aria-hidden="true">02</span><span class="material-name">Smoked Walnut</span></summary>
+                        <div class="hotspot-card"><h3>Smoked Walnut</h3><p>Linear paneling with matte treatment and continuous grain matching.</p></div>
+                    </details>
 
                     <!-- Hotspot 3: Exposed Concrete -->
-                    <div class="material-hotspot" style="top: 25%; left: 50%;">
-                        <div class="hotspot-pulse"></div>
-                        <div class="hotspot-card">
-                            <h4>Exposed Concrete</h4>
-                            <p>Structural enduement finish providing a subtle matte microtexture.</p>
-                        </div>
-                    </div>
+                    <details class="material-hotspot align-right" style="top: 25%; left: 50%;">
+                        <summary class="hotspot-pulse"><span aria-hidden="true">03</span><span class="material-name">Exposed Concrete</span></summary>
+                        <div class="hotspot-card"><h3>Exposed Concrete</h3><p>Exposed structural finish providing a subtle matte microtexture.</p></div>
+                    </details>
 
                     <!-- Hotspot 4: Blued Steel -->
-                    <div class="material-hotspot" style="top: 55%; left: 20%;">
-                        <div class="hotspot-pulse"></div>
-                        <div class="hotspot-card">
-                            <h4>Blued Steel</h4>
-                            <p>High-resistance structural profiles with a dark anti-corrosion finish.</p>
-                        </div>
-                    </div>
+                    <details class="material-hotspot align-above" style="top: 55%; left: 20%;">
+                        <summary class="hotspot-pulse"><span aria-hidden="true">04</span><span class="material-name">Blued Steel</span></summary>
+                        <div class="hotspot-card"><h3>Blued Steel</h3><p>High-resistance structural profiles with a dark anti-corrosion finish.</p></div>
+                    </details>
 
-                    <!-- Hotspot 5: Artisanal Ceramics (Inverted) -->
-                    <div class="material-hotspot invert-card" style="top: 82%; left: 32%;">
-                        <div class="hotspot-pulse"></div>
-                        <div class="hotspot-card">
-                            <h4>Artisanal Ceramics</h4>
-                            <p>Hand-modeled utilitarian vessels coated in raw volcanic ash glaze.</p>
-                        </div>
-                    </div>
+                    <!-- Hotspot 5: Artisanal Ceramics -->
+                    <details class="material-hotspot align-above" style="top: 82%; left: 32%;">
+                        <summary class="hotspot-pulse"><span aria-hidden="true">05</span><span class="material-name">Artisanal Ceramics</span></summary>
+                        <div class="hotspot-card"><h3>Artisanal Ceramics</h3><p>Hand-modeled utilitarian vessels coated in raw volcanic ash glaze.</p></div>
+                    </details>
 
                     <!-- Hotspot 6: Suspended Lighting -->
-                    <div class="material-hotspot" style="top: 52%; left: 62%;">
-                        <div class="hotspot-pulse"></div>
-                        <div class="hotspot-card">
-                            <h4>Suspended Fixtures</h4>
-                            <p>Lathed aluminum domes detailed in a textured matte black coat.</p>
-                        </div>
-                    </div>
+                    <details class="material-hotspot align-right align-above" style="top: 52%; left: 62%;">
+                        <summary class="hotspot-pulse"><span aria-hidden="true">06</span><span class="material-name">Suspended Fixtures</span></summary>
+                        <div class="hotspot-card"><h3>Suspended Fixtures</h3><p>Lathed aluminum domes detailed in a textured matte black coat.</p></div>
+                    </details>
                 </div>
             </div>
         </section>
 
         <!-- Cinematic Gallery (Portfolio Section) -->
-        <section class="section-cinematic" id="cinematic">
+        <section class="section-cinematic" id="cinematic" tabindex="-1">
             <div class="cinematic-container">
                 <div class="cinematic-header">
                     <div class="header-text-group">
@@ -131,15 +123,16 @@
                         <h2>Selected Works</h2>
                     </div>
                     <div class="cinematic-controls">
-                        <button id="track-prev" class="ctrl-btn" aria-label="Previous">←</button>
-                        <button id="track-next" class="ctrl-btn" aria-label="Next">→</button>
+                        <button id="track-prev" class="ctrl-btn" type="button" aria-label="Previous project" aria-controls="portfolio-track" hidden>←</button>
+                        <button id="track-next" class="ctrl-btn" type="button" aria-label="Next project" aria-controls="portfolio-track" hidden>→</button>
                     </div>
                 </div>
                 
-                <div class="cinematic-track" id="portfolio-track">
+                <p id="gallery-help" class="gallery-help">Swipe or scroll to explore. With keyboard focus here, use the arrow keys.</p>
+                <div class="cinematic-track" id="portfolio-track" tabindex="0" role="region" aria-label="Selected projects" aria-describedby="gallery-help">
                     <article class="cinematic-item">
                         <div class="cinematic-image-ctx">
-                            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1000&auto=format&fit=crop" alt="Residential Architecture Project">
+                            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&amp;fit=crop&amp;w=800&amp;q=80" srcset="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&amp;fit=crop&amp;w=480&amp;q=80 480w, https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&amp;fit=crop&amp;w=800&amp;q=80 800w, https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&amp;fit=crop&amp;w=1200&amp;q=80 1200w, https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&amp;fit=crop&amp;w=1600&amp;q=80 1600w" sizes="(max-width: 992px) 280px, 45vw" loading="lazy" decoding="async" alt="Residential Architecture Project">
                         </div>
                         <div class="cinematic-meta">
                             <h3>Travertine Floorbed</h3>
@@ -149,7 +142,7 @@
 
                     <article class="cinematic-item">
                         <div class="cinematic-image-ctx">
-                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1000&auto=format&fit=crop" alt="Urban Interior Project">
+                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=800&amp;q=80" srcset="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=480&amp;q=80 480w, https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=800&amp;q=80 800w, https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=1200&amp;q=80 1200w, https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=1600&amp;q=80 1600w" sizes="(max-width: 992px) 280px, 45vw" loading="lazy" decoding="async" alt="Urban Interior Project">
                         </div>
                         <div class="cinematic-meta">
                             <h3>Concrete Textures Study</h3>
@@ -159,7 +152,7 @@
 
                     <article class="cinematic-item">
                         <div class="cinematic-image-ctx">
-                            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=1000&auto=format&fit=crop" alt="Commercial Art Gallery Project">
+                            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&amp;fit=crop&amp;w=800&amp;q=80" srcset="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&amp;fit=crop&amp;w=480&amp;q=80 480w, https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&amp;fit=crop&amp;w=800&amp;q=80 800w, https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&amp;fit=crop&amp;w=1200&amp;q=80 1200w, https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&amp;fit=crop&amp;w=1600&amp;q=80 1600w" sizes="(max-width: 992px) 280px, 45vw" loading="lazy" decoding="async" alt="Commercial Art Gallery Project">
                         </div>
                         <div class="cinematic-meta">
                             <h3>Pure Volumes</h3>
@@ -171,7 +164,7 @@
         </section>
 
         <!-- Capabilities & Services -->
-        <section class="section-services" id="services">
+        <section class="section-services" id="services" tabindex="-1">
             <div class="services-container">
                 <div class="services-header">
                     <span class="section-number">04 / CAPABILITIES</span>
@@ -183,7 +176,7 @@
                         <span class="service-index">01</span>
                         <div class="service-body">
                             <h3>Interior Architecture</h3>
-                            <p>Comprehensive volumetric layout planning and spatial flow optimization under strict raw proportions.</p>
+                            <p>Space planning, lighting, and bespoke details designed around everyday use.</p>
                         </div>
                     </div>
 
@@ -191,7 +184,7 @@
                         <span class="service-index">02</span>
                         <div class="service-body">
                             <h3>Material Curation</h3>
-                            <p>Tactile juxtaposition and selective composition of premium natural stones, structural timber, and rough aggregates.</p>
+                            <p>A coordinated palette of stone, timber, and textured finishes, selected for character and durability.</p>
                         </div>
                     </div>
                 </div>
@@ -199,12 +192,13 @@
         </section>
 
         <!-- Closure & Contact Block -->
-        <section class="section-contact" id="contact">
+        <section class="section-contact" id="contact" tabindex="-1">
             <div class="contact-card-wrapper">
                 <span class="contact-tag">CONNECTION</span>
-                <h2 class="contact-headline">Seeking to transcend a space?</h2>
-                <p class="contact-sub">Let us commence a dialogue regarding your next signature environment.</p>
-                <a href="mailto:studio@nexus.com" class="contact-link-action">studio@nexus.com</a>
+                <h2 class="contact-headline">Let’s shape your next space.</h2>
+                <p class="contact-sub">Tell us about your location, the space, and what you have in mind.</p>
+                <a href="mailto:studio@example.com" class="contact-link-action">studio@example.com</a>
+                <p class="contact-note">Opens your email app. Prefer another app? Copy the address above.</p>
             </div>
         </section>
 
@@ -214,7 +208,7 @@
     <footer class="main-footer">
         <div class="footer-layout">
             <p class="footer-copy">© 2026 NEXUS Studio. All rights reserved.</p>
-            <p class="footer-tagline">Monolithic Aesthetics & Digital Framework.</p>
+            <p class="footer-tagline">Interior architecture. Material-led design.</p>
         </div>
     </footer>
 

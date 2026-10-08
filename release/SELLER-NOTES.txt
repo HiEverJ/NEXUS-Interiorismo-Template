@@ -1,0 +1,49 @@
+NEXUS 1.1.0 — NOTAS PARA EL VENDEDOR
+
+ESTADO
+Mejoras implementadas y pruebas de navegador registradas en QA.txt.
+No publicado. El ZIP es un paquete de entrega candidato, no una garantía de aceptación ni ventas.
+El correo de Creative Market rechaza la tienda, indica que no revisarán futuras solicitudes y no identifica fallos concretos de NEXUS.
+
+POSICIONAMIENTO PROPUESTO
+NEXUS — Interior Architecture HTML Template
+Una página para estudios pequeños de arquitectura interior que necesitan presentar su enfoque, materiales y proyectos con una estética sobria.
+Público: diseñadores/desarrolladores que personalizan HTML para estudios; requiere conocimientos básicos de HTML y CSS.
+Diferenciador: recorrido por materiales, galería horizontal y dos paletas, con navegación accesible y versión móvil de lectura clara.
+
+BORRADOR DE DESCRIPCIÓN DE VENTA (EN INGLÉS)
+NEXUS is a single-page HTML template for interior architecture studios. Its editorial layout pairs a desktop sidebar with a mobile section menu, a material explorer and a horizontally scrollable project gallery. Light and dark palettes let you adapt the presentation to your studio.
+
+Included: one HTML page, compiled CSS, optional Sass source files, vanilla JavaScript, local image placeholders and an HTML setup guide.
+Features: responsive navigation, native material disclosures, keyboard gallery controls, reduced-motion support, optional saved theme preference and email contact link.
+Requirements: basic HTML/CSS editing and static hosting.
+Not included: stock photographs, bundled fonts, hosting, domain, CMS, visual editor, form backend or customization service.
+Demo projects and studio details are fictional. Photography shown in the demo is not included in the download. Optional Google Fonts are loaded remotely.
+
+ANTES DE PUBLICAR
+1. Definir identidad del autor y un contacto de soporte real en ficha y documentación. No usar una firma genérica como si fuera una empresa verificada.
+2. Elegir el canal de venta y las condiciones/licencia que apliquen allí; este paquete no inventa una licencia comercial.
+3. Revisar autorización para usar fotografías de terceros en la demo pública. El ZIP no distribuye esas fotografías.
+4. Completar comprobación en Safari/iOS, Firefox, zoom 200% y dispositivos táctiles reales. No anunciar compatibilidad universal ni certificación WCAG.
+5. Comprobar rendimiento con hosting e imágenes definitivos. No anunciar 60 fps ni puntuaciones Lighthouse sin medirlas.
+6. Preparar portada y capturas reales: vista completa escritorio, móvil con menú, materiales abiertos, galería y comparación de paletas. Explicar claramente que es HTML, no WordPress.
+7. Publicar demo en el dominio elegido, agregar metadatos sociales con URL e imagen propias y probar los enlaces públicos.
+8. Mantener número de versión y registro de cambios. Probar de nuevo cada actualización.
+
+EMPAQUETADO
+Ejecutar: python scripts/package.py
+Salida: release/NEXUS-1.1.0.zip
+Incluye solo sitio, fuentes SCSS, JavaScript y documentación actual; reemplaza las fotos por un SVG local.
+Excluye Git, estas notas, scripts de mantenimiento, capturas de QA y el PDF anterior.
+No entregar el repositorio completo como ZIP.
+
+CAMBIOS 1.1.0
+Menú móvil con cierre por Escape, enlace de salto y foco de sección.
+Barra lateral estable; se elimina el colapso automático que ocultaba etiquetas.
+Materiales nativos details/summary; versión móvil como fichas.
+Galería con avance según ancho real, teclado y botones deshabilitados en extremos.
+Tema del sistema, persistencia tolerante a almacenamiento bloqueado, inicialización temprana.
+Mejora de contraste en textos secundarios, foco visible y movimiento reducido.
+Imágenes responsivas y carga diferida excepto hero; descripción y metadatos sociales básicos.
+Texto comercial más claro, CTA inicial y contacto explícito mediante correo.
+Documentación HTML, paquete sin fotografías de terceros y guía para el vendedor.

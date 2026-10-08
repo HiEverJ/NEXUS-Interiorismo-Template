@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NEXUS — Setup & Customization</title><style>
+:root{color-scheme:light}body{font:17px/1.7 system-ui,sans-serif;background:#f4f3ef;color:#242729;margin:0}main{max-width:850px;margin:auto;padding:48px 24px}h1,h2{font-family:Georgia,serif;line-height:1.2}h1{font-size:2.8rem}h2{margin-top:48px}a{color:#695030}code{background:#e7e4dc;padding:2px 5px;overflow-wrap:anywhere}li{margin:10px 0}.note{border-left:3px solid #82643f;padding:16px 20px;background:#eae8e2}nav{display:flex;flex-wrap:wrap;gap:16px}a:focus-visible{outline:3px solid #82643f;outline-offset:4px}img{max-width:100%}
+</style></head><body><main>
+<p>NEXUS / DOCUMENTATION / VERSION 1.1.0</p><h1>Your studio, your materials, your story.</h1>
+<p>A single-page HTML template for interior architecture studios. This guide covers the files you receive, what to replace and how to publish them.</p>
+<nav aria-label="Guide sections"><a href="#start">Setup</a><a href="#content">Content</a><a href="#style">Styles</a><a href="#controls">Controls</a><a href="#publish">Publish</a><a href="#support">Troubleshooting</a></nav>
+<h2 id="start">1. Open the template</h2><p>Extract the ZIP and open <code>index.html</code> in a modern browser. Use a text editor to edit the files. No installation or build command is necessary. Preview through your editor’s local web server when checking hosting behavior.</p>
+<p class="note">This is an HTML template for users comfortable editing HTML and CSS. It is not a WordPress theme or a visual page builder. Hosting, domains, a CMS, email delivery and installation services are not included.</p>
+<h2 id="content">2. Replace the demonstration content</h2><ol>
+<li>Edit the brand name, page title, meta description, Open Graph text and favicon in <code>index.html</code>.</li>
+<li>Replace the hero heading and description. Keep the first paragraph short and explain the work your studio actually does.</li>
+<li>Replace all project names, locations, service descriptions and footer details. The included projects and material descriptions are illustrative, not verified descriptions of the stock photographs.</li>
+<li>Replace <code>studio@example.com</code> in the visible email text and in <code>href="mailto:studio@example.com"</code>. This opens the visitor’s email app; it does not send a message automatically. A real form requires a separate endpoint or form service.</li>
+</ol>
+<h2>3. Add your images</h2><p>The buyer package uses a local SVG placeholder. Stock photography visible in the working demo is not bundled. Add your images under <code>assets/img/</code> and update each image’s <code>src</code> and descriptive <code>alt</code> text.</p>
+<p>If adding responsive variants, supply <code>srcset</code> with actual image widths (for example, 480w, 800w and 1200w) and a matching <code>sizes</code> value. Never leave the old demo URLs in a srcset after changing src. The hero loads first; other images use lazy loading. CSS reserves their display areas.</p>
+<p>For the material scene, reposition each detail using its percentage <code>top</code> and <code>left</code>. Use <code>align-right</code> for points on the right and <code>align-above</code> for points near the bottom. Verify open cards stay inside your image. Below 993px, these points become a list of disclosures below the photo.</p>
+<p>The demo’s five photos are remote Unsplash references. Fonts are optional remote Google Fonts references (Prata and DM Sans). No third-party image or font files are included, and no rights to those resources are granted by this template. Obtain appropriate resources for your own publication. Remove the Google Fonts links if you want to use the included system-font fallbacks without external requests.</p>
+<h2 id="style">4. Change colors and typography</h2><p>The original compiled styles are in <code>scss/main.css</code>. The current responsive and accessibility layer is <code>scss/enhancements.css</code>, loaded second. Edit its <code>:root</code> and <code>[data-theme="light"]</code> palettes to change colors.</p>
+<p>For advanced Sass editing, original sources start at <code>scss/main.scss</code>. With Dart Sass installed, run <code>sass scss/main.scss scss/main.css</code>. Keep <code>enhancements.css</code> loaded after the compiled file. Sass is optional and is not bundled. Preserve readable contrast when changing palettes.</p>
+<h2 id="controls">5. Navigation and controls</h2><ul>
+<li>The desktop sidebar stays visible. The mobile Menu button opens section links. Escape closes the menu and returns focus; selecting a link moves focus to the section.</li>
+<li>The Light theme control follows the system initially and remembers a valid user choice when storage is available. Blocked storage does not prevent navigation.</li>
+<li>Material summaries work with click, touch, Enter and Space. Escape closes an open detail when JavaScript is available. Native disclosures also work without JavaScript.</li>
+<li>The project gallery accepts horizontal scrolling, touch swipes and previous/next buttons. Focus the gallery and use Left/Right, Home or End. Buttons disable at the boundaries.</li>
+<li>Reduced-motion preferences remove animation. Without JavaScript, section links and material disclosures remain usable; the gallery still scrolls natively.</li>
+</ul>
+<h2 id="publish">6. Publish and check</h2><ol>
+<li>Upload <code>index.html</code>, <code>assets/</code> and <code>scss/</code> together to a static web host. Preserve their relative paths and filename capitalization.</li>
+<li>Use your final domain in any canonical link and social-sharing image metadata you add. These domain-specific values are intentionally not fabricated.</li>
+<li>Test at 320, 360, 768, 992, 1024 and 1440px widths, in portrait and landscape, both palettes and at 200% zoom. Check keyboard navigation and reduced motion.</li>
+<li>Check the email link with your actual address. Check every image, open material card and gallery boundary on the deployed URL.</li>
+<li>Run HTML, accessibility and performance checks on the deployed site with final images. No Lighthouse score, accessibility certification or fixed frame rate is promised.</li>
+</ol>
+<h2 id="support">7. Troubleshooting</h2><p><strong>No styling:</strong> verify both CSS files exist at their referenced paths. <strong>No photos:</strong> replace the placeholders or check external network access in the demo. <strong>No remembered theme:</strong> private browsing or storage restrictions may prevent persistence; the control still works. <strong>Email does not open:</strong> configure an email app or copy the displayed address. <strong>Material text does not match the photo:</strong> update the demo descriptions and point positions for your own scene.</p>
+<p>For support, use the seller’s contact on your purchase receipt or product listing. Include the template version, browser, viewport size, steps and a screenshot. The purchase license is provided by your store/seller; this guide does not add license permissions.</p>
+<p><a href="../index.html">Open NEXUS →</a></p>
+</main></body></html>
